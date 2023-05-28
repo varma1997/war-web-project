@@ -6,6 +6,18 @@
   <packaging>war</packaging>
   <name>WAR Web Project</name>
   <description>A very simple Maven-enabled WAR web project</description>
+   <properties>
+		<jdk.version>1.8</jdk.version>
+		<spring.version>5.1.2.RELEASE</spring.version>
+		<junit.version>4.11</junit.version>
+		<log4j.version>1.2.17</log4j.version>
+		<sonar.host.url>http://18.142.47.245:9000/</sonar.host.url>
+		<sonar.login>admin</sonar.login>
+		<sonar.password>password</sonar.password> 
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+	</properties>
   <dependencies>
   	<dependency>
   		<groupId>com.google.code.gson</groupId>
@@ -19,6 +31,21 @@
   		<scope>provided</scope>
   	</dependency>
   </dependencies>
+   <distributionManagement>
+	
+	    <repository>
+	      <id>nexus</id>
+	      <name>Chanikya Releases Nexus Repository</name>
+	      <url>http://3.0.49.225:9980/varma/repository/icicibank-release/</url>
+	    </repository>
+	    
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>Chanikya Snapshot Nexus Repository </name>
+	      <url>http://3.0.49.225:9980/varma/repository/icicibank-snapshot/</url>
+	    </snapshotRepository>
+	    
+	</distributionManagement>
   <build>
     <plugins>
       <plugin>
